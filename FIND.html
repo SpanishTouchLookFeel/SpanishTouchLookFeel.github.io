@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body onload="responsiveVoice.speak('Qué quieres buscar?','Spanish Female')">
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="HomeBut" onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO HOME">Ir a casa</button>
+        </div> 
+        <div class="MAIN">
+            <div class="maingap"></div>
+            <ul>
+                <li><button onclick="locate('Telefono','/IMAGES/phone3.svg');">
+                    <img src="/IMAGES/phone3.svg" width=100% height=80% alt="Phone"><br>Telefono
+                </button></li>
+                <li><button onclick="locate('Cartera','/IMAGES/Handbag.svg');">
+                    <img src="/IMAGES/Handbag.svg" width=100% height=80% alt="Handbag"><br>Cartera
+                </button></li>
+                <li><button onclick="locate('LLAVE DELANTERA','/IMAGES/Key.svg');">
+                    <img src="/IMAGES/Key.svg" width=100% height=80% alt="Appliances"><br>Llave delantera
+                </button></li>
+            </ul>
+            <div class="maingap"></div>
+            <ul>
+                
+                <li><button onclick="locate('LLAVE TRASERA','/IMAGES/Key.svg');">
+                    <img src="/IMAGES/Key.svg" width=100% height=80% alt="Appliances"><br>Llave trasera
+                </button></li>
+                <li><button onclick="window.location.href='toilets.html';">
+                    <img src="/IMAGES/toilet.svg" width=100% height=80% alt="toilets"><br>Baños
+                </button></li>
+                <li><button onclick="window.location.href='wallet.html';">
+                    <img src="/IMAGES/wallet.svg" width=100% height=80% alt="wallet"><br>Billetera
+                </button></li>
+                
+            </ul>
+            <div class="maingap"></div>
+        </div>
+        <div class="BACK">
+            <button onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=50% alt="GO BACK">Regresa</button>
+        </div>
+
+    </div>
+    <script>
+        function ExercisePop() {
+          var y = document.getElementById("Pop-up");
+          window.location.href='exercise-pop-up.html';
+          y.style.background = "red";
+        }
+        function locate(itemtoloc,itemimg) {
+            sessionStorage.itemtoloc=itemtoloc;
+            sessionStorage.itemimg= itemimg;
+            window.location.href='FINDalert.html';
+        }
+    </script>
+</body>
+</html>

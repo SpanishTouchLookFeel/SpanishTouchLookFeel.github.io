@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMINDER</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body onload="responsiveVoice.speak('Hacer hoy','Spanish Female')">
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="HomeBut"  onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Ir a casa</button>
+        </div> 
+        <div class="MAIN">
+            <div class="maingap"></div> 
+            <ul>
+                <li><button id="mornmedsbutton" onclick="window.location.href='MEDSmorning.html';">
+                    <img src="/IMAGES/meds.svg" width=100% height=80% alt="MORN MEDS"><br>MEDICINES<br>DE LA MANANA
+                </button></li>
+                <li><button id="evemedsbutton" onclick="window.location.href='MEDSevening.html';">
+                    <img src="/IMAGES/meds.svg" width=100% height=80% alt="EVE MEDS"><br>MEDICINES<br>DE LA TARDE
+                </button></li>
+                <li><button onclick="storeprevpage()">
+                    <img src="/IMAGES/Exercise.svg" width=100% height=80% alt="MUSIC"><br> EJERCICIOS
+                </button></li>
+            </ul>
+            <div class="maingap"></div> 
+            <ul>
+                <li><button onclick="reminder('REUNION DE TEJER','/IMAGES/knitting.svg','2:00','meeting')">
+                    <img src="/IMAGES/knitting.svg" width=100% height=80% alt="KNITTING"><br>TEJER!! 
+                </button></li>
+                <li><button onclick="reminder('CITA EN EL HOSPITAL','/IMAGES/hospital.svg','12:30','hospital')">
+                    <img src="/IMAGES/hospital.svg" width=100% height=80% alt="HOSPITAL"><br>HOSPITAL!!
+                </button></li>
+                <li><button onclick="window.location.href='REMINDER2.html';">
+                    <img src="/IMAGES/more.svg" width=100% height=80% alt="MORE"><br>MAS
+                </button></li>
+            </ul>
+            <div class="maingap"></div> 
+        </div>
+        
+        <div class="BACK">
+            <button onclick="window.location.href='calendarhome.html'">
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=50% alt="GO BACK">Regresa</button>
+        </div>
+
+    </div>
+       
+    
+</body>
+<script>
+    
+    if (sessionStorage.morningmeds=="taken"){
+        var mornmeds = document.getElementById("mornmedsbutton");
+        mornmeds.remove();
+    }
+    if (sessionStorage.eveningmeds=="taken"){
+        var evemeds = document.getElementById("evemedsbutton");
+        evemeds.remove();
+    }
+    
+    function storeprevpage(){
+        sessionStorage.prevpage="REMINDER.html";
+        window.location.href='EXERCISEdue.html';
+    }
+    function reminder(todaysreminder,todaysimg,todaystime,todaysremindertype){
+        sessionStorage.todaysreminder=todaysreminder;
+        sessionStorage.todaysimg=todaysimg;
+        sessionStorage.todaystime=todaystime;
+        sessionStorage.todaysremindertype=todaysremindertype;
+        window.location.href='MeetingReminder.html';
+    }
+</script>
+</html>

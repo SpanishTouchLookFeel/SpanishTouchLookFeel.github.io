@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICAL LOGIN</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body onload="responsiveVoice.speak('Inicio de sesion medico', 'Spanish Female')">
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="SpecialBut" onclick="window.location.href='CareLogin.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">CUIDADOR</button><!--
+                --><button class="SpecialHomeBut" onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Ir a casa</button><!--
+                --><button class="SpecialBut" onclick="window.location.href='MedLogin.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">MEDICO
+            </button>
+        </div> 
+        <div class="MAIN">
+            <div class="medical-login-container">
+                <br><p><strong>INICIO MEDICO:</strong></p>
+                <form class=loginform>
+                    
+                    <label for="username">Nombre Usuario:</label><br>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="password">Contrasena:</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="button" href="#" onclick="ChkPW()" value="inicio">
+                        
+
+    
+                    
+                    
+                </form>
+            </div>
+            
+            
+        </div>
+        <div class="BACK">
+            <button onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=50% alt="GO BACK">GO BACK</button>
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    function ChkPW() {
+      var x = document.getElementById("password");
+      if (x.value==="mary"){
+          window.location.href="medicalhome.html"
+      }
+    }
+    </script>
+                    
+              
+
+
+
+</html>

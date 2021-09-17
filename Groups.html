@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUP CALL</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body onload="responsiveVoice.speak('llamada de grupo','Spanish Female')" >
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="HomeBut" onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=90% alt="GO BACK"></button>
+        </div> 
+        
+        <div class="MAIN">
+            <div class="maingap"></div> 
+            <ul>
+                <li><button onclick="groupcall('/IMAGES/knitting.svg','grupo de MARTES')">
+                    <img src="/IMAGES/knitting.svg" width=80% height=80% alt="Will"><br>MARTES
+                </button></li>
+                <li><button onclick="groupcall('/IMAGES/church.svg', 'grupo de la IGLESIA')"> 
+                    <img src="/IMAGES/church.svg" width=80% height=80% alt="Group CALL"><br>IGLESIA
+                </button></li>
+                <li><button onclick="groupcall('/IMAGES/family.svg','grupo FAMILIA')">
+                    <img src="/IMAGES/family.svg" width=80% height=80% alt="VideoCall"><br>FAMILIA
+                </button></li>
+                
+            </ul>
+            <div class="maingap"></div>
+            <ul>
+                <li><button onclick="groupcall('/IMAGES/knitting.svg','grupo de TEJER')">
+                    <img src="/IMAGES/knitknit.svg" width=80% height=80% alt="KNIT"><br>TEJER
+                </button></li>
+                <li><button onclick="groupcall('/IMAGES/sewing.svg','grupo de COSTURA')">
+                    <img src="/IMAGES/sewing.svg" width=80% height=80% alt="SEWING"><br>COSTURA
+                </button></li>
+                <li><button onclick="window.location.href='https://meet.google.com/lookup/bj66f76r3k?authuser=0&hs=179';">
+                    <img src="/IMAGES/more.svg" width=80% height=80% alt="INACTIVE"><br>MAS
+                </button></li>
+                
+                
+            </ul>
+            <div class="maingap"></div> 
+        </div>
+        
+        <div class="BACK">
+            <button onclick="window.location.href=document.referrer;" >
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=90% alt="GO BACK"></button>
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    function groupcall(imgsrc,groupname) {
+        sessionStorage.imgsrc=imgsrc;
+        sessionStorage.groupname=groupname;
+        window.location.href='GroupCalling.html';
+    } 
+
+   
+
+</script>
+</html>

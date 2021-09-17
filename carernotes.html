@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARER</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="SpecialBut" onclick="window.location.href='CareLogin.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Cuidador</button><!--
+                --><button class="SpecialHomeBut" onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Ir a casa</button><!--
+                --><button class="SpecialBut" onclick="window.location.href='MedLogin.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Medico
+            </button>
+        </div> 
+        <div class="MAIN">
+            <form action="/DATA/Data.txt">
+                <blockquote>
+                    <label for="date">Fecha:</label><br>
+                    <input type="date" id="date" name="date"><br>
+                    <label for="time">Tiempo:</label><br>
+                    <input type="time" id="time" name="time"><br>
+                    <label for="fname">Nombre de Cuidador:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="Comments">Commentarios:</label><br>
+                
+                    <textarea class="TextArea" name="Comments" id = "Comments" rows="10" cols="30"></textarea>
+                    <br><br>
+                    <input type="button" href="#" value="inicio">
+                    
+
+                </blockquote>
+                
+            </form>
+            
+        </div>
+        <div class="BACK">
+            <button onclick="window.location.href=document.referrer;">
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=50% alt="GO BACK">Regresa</button>
+        </div>
+
+    </div>
+    
+</body>
+
+                    
+              
+
+
+
+</html>
