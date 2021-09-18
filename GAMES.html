@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUEGOS</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script> 
+    <div class="container">
+        
+        <div class="HOME">
+            <button class="HomeBut" onclick="window.location.href='touchmenu.html';">
+                <img src="/IMAGES/Home-button.svg" width=100% height=50% alt="GO BACK">Ir a casa</button>
+        </div> 
+        <div class="MAIN">
+            <div class="maingap"></div>
+            <ul>
+                <li><button onclick="storeiframe('Rompecabezas','https://thejigsawpuzzles.com/','jigsaw','allow-scripts allow-top-navigation allow-same-origin allow-presentation allow-forms allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-modals allow-orientation-lock')">
+                    <img src="/IMAGES/jigsaw.svg" width=100% height=80% alt="TV"><br>ROMPECABEZAS
+                </button></li>
+                <li><button onclick="storeiframe('Suduko','https://zone.msn.com/en/sudoku/','suduco','allow-scripts allow-top-navigation allow-same-origin allow-presentation allow-forms allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-modals allow-orientation-lock')">
+                    <img src="/IMAGES/suduko.svg" width=100% height=80% alt="TV"><br>SUDUKO
+                </button></li>
+                <li><button onclick="storeiframe('Ajedrez','https://www.chess.com/daily_puzzle','chess','allow-scripts allow-top-navigation allow-same-origin allow-presentation allow-forms allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-modals allow-orientation-lock')">
+                    <img src="/IMAGES/chess.svg" width=100% height=80% alt="TV"><br>AJEDREZ
+                </button></li>
+                
+               
+            </ul>
+            <div class="maingap"></div>
+            <ul>
+                <li><button onclick="storeiframe('Crucigrams','https://CrosswordHobbyist.com/','jigsaw','allow-scripts allow-top-navigation allow-same-origin allow-presentation allow-forms allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-modals allow-orientation-lock')">
+                    <img src="/IMAGES/crossword.svg" width=100% height=80% alt="TV"><br>CRUCIGRAMAS
+                </button></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="maingap"></div>
+        </div>
+        
+        <div class="BACK">
+            <button onclick="window.location.href='ACTIVITY1.html';">
+                <img src="/IMAGES/Back-arrow.svg" width=100% height=50% alt="GO BACK">Regresa</button>
+        </div>
+
+    </div>
+       
+    
+</body>
+<script>
+    responsiveVoice.speak('Menu de juegos','Spanish Female');
+    function storeiframe(activity,iframesrc,iframename,iframesandbox) {
+        sessionStorage.iframesrc=iframesrc;
+        sessionStorage.iframename=iframename;
+        sessionStorage.iframesandbox=iframesandbox;
+        sessionStorage.activity=activity;
+        window.location.href='ActivityAction2.html';
+        
+    }
+</script>
+</html>
